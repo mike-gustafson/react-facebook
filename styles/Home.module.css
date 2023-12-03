@@ -80,6 +80,39 @@
   line-height: 1.5;
 }
 
+.tweet {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tweet h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.tweet h3::before {
+  content: "🐦"; /* Twitter bird emoji */
+  margin-right: 5px;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .logo {
   height: 1em;
 }

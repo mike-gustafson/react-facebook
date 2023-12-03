@@ -2,57 +2,30 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
+import Menu from './menu';
+import Newsfeed from './newsfeed';
+import RandomUpdates from './random-updates';
+
 
 export default function Home() { // exporting the function Home
   return (
     <div className={styles.container}>
       <Head>
-        <title>Rome's Engineering Blog</title>
+        <title>Fakebook</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      <Menu username="Username" message="Notifications" />
       <main>
         <h1 className={styles.title}>
-          Welcome to my blog!
+          Newsfeed
+          <Newsfeed />
         </h1>
-
-        <Image src='/engineer.png' alt='engineer' width='200' height='200'/>
-
-        <p className={styles.description}>
-          Get started by reading the blog.
-        </p>
-
-        <div className={styles.grid}>
-          <Link href="/posts/first-post" className={styles.card}>
-            <h3>First Blog &rarr;</h3>
-            <p>Learn about my engineering journey</p>
-          </Link>
-
-          <Link href="/posts/second-post" className={styles.card}>
-            <h3>Second Blog &rarr;</h3>
-            <p>Learn about React</p>
-          </Link>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h3>Third Blog &rarr;</h3>
-            <p>Discover all the cool things about MongoDB.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Fourth Blog &rarr;</h3>
-            <p>
-              My new job pays crazy good.
-            </p>
-          </a>
-        </div>
+        <h1>
+          Random Updates
+          
+        </h1>
+          <RandomUpdates />
       </main>
-
       <footer>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
