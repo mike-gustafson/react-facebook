@@ -16,7 +16,7 @@
 .contentContainer {
   display: flex;
   flex-direction: row;
-  margin-top: 20px;
+  margin-top: 10px;
   padding: 0;
 }
 
@@ -36,7 +36,7 @@
   background-color: #ffffff;
   overflow-y: auto;
   margin-left: 0;
-  margin-top: 40px;
+  margin-top: 30px;
   border: 2px solid #f0f2f5;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   z-index: 1;
@@ -126,7 +126,6 @@
 .logo {
   height: 1em;
 }
-
 
 .menuTitle {
   margin: 0;

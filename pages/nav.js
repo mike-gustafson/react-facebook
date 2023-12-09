@@ -23,7 +23,7 @@ export default function Nav({ onMenuItemClick }) {
     return (
         <div className={style.navBar}>
             <div className={style.navBar_left}>
-                <img src="/Facebook-Logos.png" />
+                <img src="/Facebook-Logos.png" className={style.fblogo} />
                 <div className={style.navBar_input}>
                     <SearchIcon />
                     <input type="text" placeholder="Search" />

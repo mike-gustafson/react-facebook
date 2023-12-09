@@ -5,6 +5,7 @@ import Newsfeed from './newsfeed';
 import RandomUpdates from './random-updates';
 import Gaming from './gaming/index';
 import Nav from './nav'
+import Sidebar from './gaming/sidebar';
 
   export default function Home() {
   const [activeMenuItem, setActiveMenuItem] = useState('Newsfeed');
@@ -22,12 +23,9 @@ import Nav from './nav'
       <div className={styles.navBarContainer}>
         <Nav onMenuItemClick={handleMenuItemClick} />
       </div>
-      <div className={styles.menuContainer}>
-        {/* <Menu username="Username" message="Notifications" onMenuItemClick={handleMenuItemClick} /> */}
-      </div>
       <div className={styles.contentContainer}>
         <div className={styles.sidebar}>
-          <p>Sidebar Menu Content</p>
+          <Sidebar />
         </div>
         <main className={styles.main}>
           {activeMenuItem === 'Newsfeed' && (
