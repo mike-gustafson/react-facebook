@@ -1,5 +1,5 @@
 import style from "../styles/Nav.module.css";
-import React from "react";
+import React, { useState } from "react";
 import SearchIcon from '@mui/icons-material/Search';
 import HomeIcon from '@mui/icons-material/Home';
 import OndemandVideoIcon from '@mui/icons-material/OndemandVideo';
@@ -11,10 +11,13 @@ import { Avatar, IconButton } from '@mui/material';
 import MessageIcon from '@mui/icons-material/Message';
 
 export default function Nav({ onMenuItemClick }) {
+    const [activeMenuItem, setActiveMenuItem] = useState('Newsfeed');
+
     const handleMenuItemClick = (menuItem) => {
         if (onMenuItemClick) {
             onMenuItemClick(menuItem);
         }
+        setActiveMenuItem(menuItem);
     };
 
     return (
@@ -28,25 +31,25 @@ export default function Nav({ onMenuItemClick }) {
             </div>
             <div className={style.navBar_center}>
                 <div
-                    className={`${style.navBar_center_item} ${style.navBar_center_item_active}`}
+                    className={`${style.navBar_center_item} ${activeMenuItem === 'Newsfeed' && style.navBar_center_item_active}`}
                     onClick={() => handleMenuItemClick('Newsfeed')}
                 >
                     <HomeIcon fontSize="large" />
                 </div>
                 <div
-                    className={style.navBar_center_item}
+                    className={`${style.navBar_center_item} ${activeMenuItem === 'Video' && style.navBar_center_item_active}`}
                     onClick={() => handleMenuItemClick('Video')}
                 >
                     <OndemandVideoIcon fontSize="large" />
                 </div>
                 <div
-                    className={style.navBar_center_item}
+                    className={`${style.navBar_center_item} ${activeMenuItem === 'SupervisedUserCircle' && style.navBar_center_item_active}`}
                     onClick={() => handleMenuItemClick('SupervisedUserCircle')}
                 >
                     <SupervisedUserCircleIcon fontSize="large" />
                 </div>
                 <div
-                    className={style.navBar_center_item}
+                    className={`${style.navBar_center_item} ${activeMenuItem === 'Gaming' && style.navBar_center_item_active}`}
                     onClick={() => handleMenuItemClick('Gaming')}
                 >
                     <SportsEsportsIcon fontSize="large" />
