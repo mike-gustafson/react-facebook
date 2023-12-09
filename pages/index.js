@@ -5,6 +5,7 @@ import Menu from './menu';
 import Newsfeed from './newsfeed';
 import RandomUpdates from './random-updates';
 import Gaming from './gaming/index';
+import Nav from './nav'
 
   export default function Home() {
   const [activeMenuItem, setActiveMenuItem] = useState('Newsfeed');
@@ -19,9 +20,11 @@ import Gaming from './gaming/index';
         <title>Fakebook</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      
+      <div className={styles.navBarContainer}>
+        <Nav />
+      </div>
       <div className={styles.menuContainer} >
-        <Menu username="Username" message="Notifications" onMenuItemClick={handleMenuItemClick} />
+        {/* <Menu username="Username" message="Notifications" onMenuItemClick={handleMenuItemClick} /> */}
       </div>
       <div className={styles.contentContainer}>
         <div className={styles.sidebar}>

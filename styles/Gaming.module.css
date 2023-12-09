@@ -1,6 +1,6 @@
 /* Parent element for each row */
 .gameRow {
-    width: 100%;
+  width: calc(95vw - 300px);
   }
 
 /* Row title text */
@@ -19,7 +19,6 @@
   overflow-x: auto;
   margin: 0;
   padding: 0;
-  width: calc(95vw - 300px);
   scroll-snap-type: x mandatory;
   scroll-padding: 0 10px;
 }
@@ -131,6 +130,3 @@
     margin: 5px;
     margin-left: 0;
   }
-
-  
-  
