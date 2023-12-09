@@ -41,15 +41,18 @@ height: 40px;
     justify-content: center;
 }
 
-.navBar_center_item{
+.navBar_center_item {
     color: grey;
 }
 .navBar_center_item:hover{
     color: #2e81f4;
 }
 
-.navBar_center_item.active{
+.navBar_center_item_active{
     border-bottom: 2px solid #2e81f4;
+    color: #2e81f4;
+}
+.navBar_center_item_active > .MuiSvgIcon-root{
     color: #2e81f4;
 }
 
@@ -60,7 +63,7 @@ height: 40px;
     cursor: pointer;
 }
 
-.navBar_center_item:hover{
+.navBar_center_item:hover {
     background-color: #eff2f5;
     border-radius: 10px;
     align-items: center;
@@ -70,4 +73,13 @@ height: 40px;
 
 .navBar_right{
     display: flex;
+}
+
+.navBar_center_item:hover .MuiSvgIcon-root {
+    color: #2e81f4;
+}
+
+
+.navBar_center_item_active .MuiSvgIcon-root {
+    color: #2e81f4;
 }
