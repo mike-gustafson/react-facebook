@@ -1,10 +1,47 @@
-.container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
+.menuContainer {
+  position: fixed;
+  top: 0;
+  right: 0;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+  width: 100%;
+  height: 50px;
+  padding: 0;
+  z-index: 99;
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  padding: 0;
+}
+
+.main {
+  flex-grow: 1;
+  margin-top: 20px;
+  background-color: #f0f2f5;
+  width: calc(100% - 300px);
+  margin-left: 300px;
+  padding-left: 2.5%;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 300px;
+  background-color: #ffffff;
+  overflow-y: auto;
+  margin-left: 0;
+  margin-top: 50px;
+  border: 2px solid #f0f2f5;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 1;
 }
 
 .title a {
@@ -18,18 +55,7 @@
   text-decoration: underline;
 }
 
-.title {
-  margin: 0 0 1rem;
-  line-height: 1.15;
-  font-size: 3.6rem;
-}
-
-.title {
-  text-align: center;
-}
-
-.title,
-.description {
+.title, .description {
   text-align: center;
 }
 
@@ -43,9 +69,6 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-
-  max-width: 800px;
-  margin-top: 3rem;
 }
 
 .card {
@@ -55,16 +78,12 @@
   text-align: left;
   color: inherit;
   text-decoration: none;
-  border: 1px solid #eaeaea;
+  border: 1px solid #898F9C;
   border-radius: 10px;
-  transition:
-    color 0.15s ease,
-    border-color 0.15s ease;
+  transition: color 0.15s ease, border-color 0.15s ease;
 }
 
-.card:hover,
-.card:focus,
-.card:active {
+.card:hover, .card:focus, .card:active {
   color: #0070f3;
   border-color: #0070f3;
 }
@@ -80,46 +99,37 @@
   line-height: 1.5;
 }
 
-.tweet {
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 8px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.imageContainer {
+  flex: 1;
+  position: relative;
 }
-
-.tweet h3 {
-  margin: 0;
-  font-size: 16px;
-}
-
-.tweet h3::before {
-  content: "🐦"; /* Twitter bird emoji */
-  margin-right: 5px;
-}
-
 .menu {
   position: fixed;
   top: 0;
   right: 0;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   list-style: none;
-  margin: 0;
-  padding: 0;
+  background-color: #ffffff;
+  width: 100%;
+  padding: 10px;
+  z-index: 99;
 }
+
+.scrollContainer {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
 
 .logo {
   height: 1em;
 }
 
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
+
+.menuTitle {
+  margin: 0;
 }
