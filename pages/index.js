@@ -31,6 +31,7 @@ import Sidebar from './gaming/sidebar';
           {activeMenuItem === 'Newsfeed' && (
             <>
               <h1 className={styles.title}>Newsfeed</h1>
+              <Newsfeed />
             </>
           )}
           {activeMenuItem === 'RandomUpdates' && (

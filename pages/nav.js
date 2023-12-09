@@ -44,7 +44,7 @@ export default function Nav({ onMenuItemClick }) {
                 </div>
                 <div
                     className={`${style.navBar_center_item} ${activeMenuItem === 'SupervisedUserCircle' && style.navBar_center_item_active}`}
-                    onClick={() => handleMenuItemClick('SupervisedUserCircle')}
+                    onClick={() => handleMenuItemClick('RandomUpdates')}
                 >
                     <SupervisedUserCircleIcon fontSize="large" />
                 </div>
