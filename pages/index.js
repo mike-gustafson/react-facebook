@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-import Menu from './menu';
 import Newsfeed from './newsfeed';
 import RandomUpdates from './random-updates';
 import Gaming from './gaming/index';
@@ -21,9 +20,9 @@ import Nav from './nav'
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.navBarContainer}>
-        <Nav />
+        <Nav onMenuItemClick={handleMenuItemClick} />
       </div>
-      <div className={styles.menuContainer} >
+      <div className={styles.menuContainer}>
         {/* <Menu username="Username" message="Notifications" onMenuItemClick={handleMenuItemClick} /> */}
       </div>
       <div className={styles.contentContainer}>
@@ -34,7 +33,6 @@ import Nav from './nav'
           {activeMenuItem === 'Newsfeed' && (
             <>
               <h1 className={styles.title}>Newsfeed</h1>
-              <Newsfeed />
             </>
           )}
           {activeMenuItem === 'RandomUpdates' && (
@@ -45,7 +43,6 @@ import Nav from './nav'
           )}
           {activeMenuItem === 'Gaming' && (
             <>
-              <h1>Gaming</h1>
               <Gaming />
             </>
           )}

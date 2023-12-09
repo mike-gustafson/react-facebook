@@ -10,7 +10,14 @@ import AppsIcon from '@mui/icons-material/Apps';
 import { Avatar,IconButton } from '@mui/material';
 import MessageIcon from '@mui/icons-material/Message';
 import Link from 'next/link';
-export default function Nav(){
+
+export default function Nav({ onMenuItemClick }){
+    const handleMenuItemClick = (menuItem) => {
+        if (onMenuItemClick) {
+            onMenuItemClick(menuItem);
+        }
+    };
+
     return (
         <div className={style.navBar}>
             <div className={style.navBar_left}>
@@ -21,7 +28,7 @@ export default function Nav(){
                 </div>
             </div>
             <div className={style.navBar_center}>
-                <div className={style.navBar_center_item}>
+                <div className={style.navBar_center_item} onClick={() => onMenuItemClick('Newsfeed')}>
                     <HomeIcon fontSize="large"/>
                 </div>
                 <div className={style.navBar_center_item}>
@@ -32,7 +39,7 @@ export default function Nav(){
                 <div className={style.navBar_center_item}>
                     <SupervisedUserCircleIcon fontSize="large"/>
                 </div>
-                <div className={style.navBar_center_item}>
+                <div className={style.navBar_center_item} onClick={() => onMenuItemClick('Gaming')}>
                     <SportsEsportsIcon fontSize="large"/>
                 </div>
             </div>
