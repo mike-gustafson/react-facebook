@@ -1,13 +1,8 @@
-/* Newsfeed.module.css */
-
-/* Style the main container */
 .newsfeed-container {
     margin: auto;
     padding: 20px;
-
   }
   
-  /* Style individual posts */
   .post{
     border: 1px solid #ddd;
     border-radius: 8px;

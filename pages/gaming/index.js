@@ -4,7 +4,7 @@ import HappeningNow from "./main/03-happening-now";
 import MostPlayedGames from "./main/04-most-played-games";
 import FeaturedGames from "./main/05-featured-games";
 import AllGames from "./main/06-all-games";
-import styles from '../../styles/Home.module.css';
+import styles from '../../styles/Gaming.module.css';
 
 export default function Gaming() {
     return (

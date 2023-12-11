@@ -1,4 +1,11 @@
-/* Parent element for each row */
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+
+}
+
 .gameRow {
   width: calc(95vw - 300px);
   }
