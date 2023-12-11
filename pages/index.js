@@ -20,17 +20,16 @@ import Sidebar from './gaming/sidebar';
         <title>Fakebook</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      
       <div className={styles.navBarContainer}>
         <Nav onMenuItemClick={handleMenuItemClick} />
       </div>
       <div className={styles.contentContainer}>
-        <div className={styles.sidebar}>
-          <Sidebar />
-        </div>
+        <Sidebar />
+        
         <main className={styles.main}>
           {activeMenuItem === 'Newsfeed' && (
-            <>
-              <h1 className={styles.title}>Newsfeed</h1>
+            <><br></br>
               <Newsfeed />
             </>
           )}
@@ -46,6 +45,7 @@ import Sidebar from './gaming/sidebar';
             </>
           )}
         </main>
+
       </div>
       
       <footer>

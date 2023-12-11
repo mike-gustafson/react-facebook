@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Newsfeed.module.css'
 import Article from './article';
 
 const reactTutorialArticles = [
@@ -22,14 +22,14 @@ const reactTutorialArticles = [
         key={idx}
         title={article.title}
         body={article.body}
-        timestamp={new Date().toLocaleString()} // Add a timestamp for each article
-        author="John Doe" // Add an author for each article
-        likes={Math.floor(Math.random() * 100)} // Simulate random likes
-        comments={Math.floor(Math.random() * 50)} // Simulate random comments
-        shares={Math.floor(Math.random() * 20)} // Simulate random shares
-        // You can add more properties as needed
-        imageUrl={`https://placekitten.com/200/300?random=${idx}`} // Example: Simulated image URL
-        videoUrl="https://www.example.com/sample.mp4" // Example: Simulated video URL
+        timestamp={new Date().toLocaleString()}
+        author="John Doe"
+        likes={Math.floor(Math.random() * 100)}
+        comments={Math.floor(Math.random() * 50)}
+        shares={Math.floor(Math.random() * 20)}
+        imageUrl={`https://placekitten.com/200/300?random=${idx}`}
+        videoUrl="https://www.example.com/sample.mp4"
+        className={styles.post}
       />
     ));
   
