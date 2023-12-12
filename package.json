@@ -23,5 +23,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@wixc3/react-board": "^2.3.0"
+  }
 }

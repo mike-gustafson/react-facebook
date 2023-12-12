@@ -11,7 +11,7 @@ import Nav from './nav'
 
   const handleMenuItemClick = (menuItem) => {
     setActiveMenuItem(menuItem);
-  };
+  }
 
   return (
     <div className={styles.container}>
