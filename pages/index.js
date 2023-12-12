@@ -1,11 +1,10 @@
 import { useState } from 'react';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-import Newsfeed from './newsfeed';
+import Newsfeed from './newsfeed/newsfeed';
 import RandomUpdates from './random-updates';
-import Gaming from './gaming/index';
+import Gaming from './gaming/gaming';
 import Nav from './nav'
-import Sidebar from './gaming/sidebar';
 
   export default function Home() {
   const [activeMenuItem, setActiveMenuItem] = useState('Newsfeed');
@@ -25,13 +24,8 @@ import Sidebar from './gaming/sidebar';
         <Nav onMenuItemClick={handleMenuItemClick} />
       </div>
       <div className={styles.contentContainer}>
-        <Sidebar />
-        
-        <main className={styles.main}>
           {activeMenuItem === 'Newsfeed' && (
-            <><br></br>
               <Newsfeed />
-            </>
           )}
           {activeMenuItem === 'RandomUpdates' && (
             <>
@@ -40,12 +34,8 @@ import Sidebar from './gaming/sidebar';
             </>
           )}
           {activeMenuItem === 'Gaming' && (
-            <>
               <Gaming />
-            </>
           )}
-        </main>
-
       </div>
       
       <footer>

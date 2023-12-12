@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import styles from '../../../styles/Sidebar.module.css';
+import styles from '../../../styles/Gaming.module.css';
 import SportsSoccerIcon from '@mui/icons-material/SportsSoccer';
 import VideogameAssetIcon from '@mui/icons-material/VideogameAsset';
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
@@ -59,7 +59,7 @@ export default function Categories() {
 
   return (
     <div className={styles.sidebar_categories_region}>
-        <h3 className={styles.title}>Categories</h3>
+        <h3 className={styles.sidebar_subtitle}>Categories</h3>
         {CategoriesArray}
         <br/>
       </div>

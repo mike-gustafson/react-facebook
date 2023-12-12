@@ -1,6 +1,6 @@
-import React from 'react';
-import styles from '../styles/Newsfeed.module.css'
-import Article from './article';
+import React from "react";
+import Article from "./articles";
+import styles from "../../../styles/Newsfeed.module.css";
 
 const reactTutorialArticles = [
     {      title: "Getting Started with React: A Beginner's Guide",      body: "In this tutorial, we will explore the basics of React, covering concepts such as components, JSX, and state. By the end, you'll have a solid foundation to build upon."    },
@@ -15,8 +15,7 @@ const reactTutorialArticles = [
     {      title: "Optimizing React Performance: Best Practices and Tips",      body: "Learn how to optimize the performance of your React applications. This tutorial covers techniques such as memoization, code splitting, and lazy loading to ensure a smooth user experience."    }
   ];
 
-
-  export default function Newsfeed() {
+  function Post() {
     const articlesArray = reactTutorialArticles.map((article, idx) => (
       <Article
         key={idx}
@@ -32,10 +31,19 @@ const reactTutorialArticles = [
         className={styles.post}
       />
     ));
-  
+
     return (
-      <div className={styles.container}>
-        <div className={styles.grid}>{articlesArray}</div>
+      <div>
+        {articlesArray}
       </div>
     );
-  }
+}
+
+export default function Feed() {
+    return (
+        <div className={styles.feed}>
+            <Post />
+            hello
+        </div>
+    );
+}

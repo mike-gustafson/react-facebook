@@ -1,4 +1,4 @@
-import styles from '../../../styles/Sidebar.module.css'
+import styles from '../../../styles/Gaming.module.css'
 import SettingsIcon from '@mui/icons-material/Settings';
 
 export default function SidebarHeader() {

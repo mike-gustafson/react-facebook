@@ -1,14 +1,48 @@
-.newsfeed-container {
-    margin: auto;
-    padding: 20px;
-  }
+.left_sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: calc(100% - 60px);
+  width: 274px;
+  background-color: #f0f2f5;
+  overflow: hidden;
+  overflow-y: scroll;
+  padding: 0;
+}
+
+.feed {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: calc(100vw - 574px);
+  height: 100%;
+  background-color: #f0f2f5;
+  overflow: hidden;
+  overflow-y: scroll;
+  padding: 2.5%;
+  margin: 0;
+}
+
+.right_sidebar {
+  position: absolute;
+  top: 0;
+  left: calc(100vw - 280px);
+  height: 100vh;
+  width: 300px;
+  background-color: #f0f2f5;
+  overflow: hidden;
+  overflow-y: scroll;
+}
   
   .post{
     border: 1px solid #ddd;
     border-radius: 8px;
-    width: 60%;
+    max-width: 620px;
+    width: 90%;
     overflow: hidden;
-    margin-bottom: 20px;
+    margin: 0 auto 20px auto;
     background-color: #fff;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     font-family: Arial, Helvetica, sans-serif;
@@ -75,3 +109,48 @@
     color: #385898; /* Facebook's blue color for icons */
   }
   
+  .sidebarAvatar{
+    display: flex;
+    width: 100%;
+    height: 35px;
+    align-items: center;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover; 
+  }
+
+.sidebarList {
+    padding: 0;
+    list-style: none;
+  }
+
+
+  .sidebarIcon {
+    margin-right: 10px;
+  }
+
+
+
+  .sidebarLink {
+    display: flex;
+    height: 46.5px;
+    color: #050505;
+    font-size: 14px;
+      font-weight: 500;
+      align-items: center;
+      border-radius: 10px;
+      width: 100%;
+      padding: 0 10px 0 10px;
+      }
+    .sidebarLink:hover {
+      background-color: #e4e6eb;
+    }
+    .sidebarLink:hover > .link_icon {
+    }
+    .link_icon {
+      background-color: #e4e6eb;
+      color: #050505;
+      width: 20px;
+      height: auto;
+      border-radius: 50%;
+    }
