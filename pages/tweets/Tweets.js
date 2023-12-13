@@ -1,7 +1,7 @@
-import styles from '../styles/Tweets.module.css'
-import Tweet from './tweet';
+import styles from '../../styles/Tweets.module.css'
+import Tweet from './components/tweet';
 
-const reactHacksTweets = [
+const tweets = [
     { username: "ByteBender42", tweet: "Optimize your React app like a pro! 🚀 Use React.memo() to memoize components and boost performance. #ReactHacks #PerformanceBoost"    },
     { username: "CodeNinjaMatrix", tweet: "Unleash the power of && for sleek conditional rendering in React. Less code, more readability! #ReactHacks #JavaScript"    },
     { username: "StateSyncSorcerer", tweet: "Sync your React component state with external changes using useEffect and props. Level up your state game! #ReactHacks #Hooks"    },
@@ -25,7 +25,7 @@ const reactHacksTweets = [
 ];
 
 export default function RandomUpdates() {
-    const tweetsArray = reactHacksTweets.map((tweet, idx) => {
+    const tweetsArray = tweets.map((tweet, idx) => {
         return <Tweet username={tweet.username} tweet={tweet.tweet} key={idx} />
     });
 

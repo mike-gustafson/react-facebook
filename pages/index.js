@@ -1,53 +1,50 @@
-import { useState } from 'react';
 import Head from 'next/head';
-import styles from '../styles/Home.module.css';
-import Newsfeed from './newsfeed/newsfeed';
-import RandomUpdates from './random-updates';
-import Gaming from './gaming/gaming';
-import Nav from './nav'
+import { useState } from 'react';
 
-  export default function Home() {
+// components
+import NavBar from './NavBar';
+import Tweets from './tweets/Tweets';
+import Gaming from './gaming/gaming';
+import Newsfeed from './newsfeed/Newsfeed';
+
+// styles
+import style from '../styles/Home.module.css';
+
+// Home component -- creates the base layout for the app
+export default function Home() {
+
+  // set the default active menu item to Newsfeed on page load
   const [activeMenuItem, setActiveMenuItem] = useState('Newsfeed');
 
+  // handleMenuItemClick -- sets the active menu item when an icon is clicked
   const handleMenuItemClick = (menuItem) => {
     setActiveMenuItem(menuItem);
-  }
+  };
 
+  // return the Home component - builds the base layout for the app
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Fakebook</title>
-        <link rel="icon" href="/favicon.ico" />
+    <div className={style.container}>                    {/* container for the entire app */}
+
+      <Head>                                             {/* set the page title and favicon */}  
+        <title>Fakebook</title>                          {/* page title */}
+        <link rel="icon" href="/favicon.ico" />          {/* favicon */}
       </Head>
-      
-      <div className={styles.navBarContainer}>
-        <Nav onMenuItemClick={handleMenuItemClick} />
+
+      <div className={style.navBarContainer}>            {/* container for the nav bar component */}
+        <NavBar onMenuItemClick={handleMenuItemClick} /> {/* nav bar component */}
       </div>
-      <div className={styles.contentContainer}>
-          {activeMenuItem === 'Newsfeed' && (
-              <Newsfeed />
-          )}
-          {activeMenuItem === 'RandomUpdates' && (
-            <>
-              <h1>Random Updates</h1>
-              <RandomUpdates />
-            </>
-          )}
-          {activeMenuItem === 'Gaming' && (
-              <Gaming />
-          )}
+
+      <div className={style.contentContainer}>           {/* container for the main content of the app */}
+        {activeMenuItem === 'Newsfeed' && (
+          <Newsfeed />                                   // newsfeed component             
+        )}
+        {activeMenuItem === 'Tweets' && (               
+          <Tweets />                                     // tweets component
+        )}
+        {activeMenuItem === 'Gaming' && (                               
+          <Gaming />                                     // gaming component       
+        )}
       </div>
-      
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className={styles.logo} />
-        </a>
-      </footer>
     </div>
   );
 }

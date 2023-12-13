@@ -2,10 +2,7 @@ import { useState } from "react";
 import React from "react";
 import Article from "./articles";
 import styles from "../../../styles/Newsfeed.module.css";
-import VideoCameraFrontIcon from '@mui/icons-material/VideoCameraFront';
-import FilterIcon from '@mui/icons-material/Filter';
-import SentimentVerySatisfiedIcon from '@mui/icons-material/SentimentVerySatisfied';
-
+import NewPostForm from "./NewPostForm";
 let initialReactTutorialArticles = [
   { title: "Getting Started with React: A Beginner's Guide", body: "In this tutorial, we will explore the basics of React, covering concepts such as components, JSX, and state. By the end, you'll have a solid foundation to build upon." },
   { title: "Understanding React Components and Props", body: "Learn how to create reusable components in React and pass data between them using props. This article dives into the core building blocks of a React application." },
@@ -19,67 +16,7 @@ let initialReactTutorialArticles = [
   { title: "Optimizing React Performance: Best Practices and Tips", body: "Learn how to optimize the performance of your React applications. This tutorial covers techniques such as memoization, code splitting, and lazy loading to ensure a smooth user experience." }
 ];
 
-function NewPostForm({ onAddPost }) {
-  const title = useState("new post");
-  const [body, setBody] = useState("");
 
-  const handleAddPost = () => {
-    // Basic validation, you can enhance it as needed
-    if (title.trim() === "" || body.trim() === "") {
-      alert("Please enter both title and body for the post.");
-      return;
-    }
-
-    // Add the new post to the array
-    onAddPost({ title, body });
-
-    // Clear the form
-    setBody("");
-  };
-
-  return (
-    <div className={styles.newPostContainer}>
-      <div className={styles.newPostBody}>
-        <div className={styles.newPostTop}>
-          <div className={styles.avatar}></div>
-          <div className={styles.newPostCreatePost}>
-            What's on your mind, User?
-          </div>
-        </div>
-        <hr className={styles.divider} />
-        <div className={styles.newPostBottom}>
-          <div className={styles.newPostAddOns}>
-            <div className={styles.newPostLiveVideo}>
-              <div className={styles.newPostLiveVideoIcon}>
-                <VideoCameraFrontIcon className={styles.newPostLiveVideoIcon}/>
-                </div>
-              <div className={styles.newPostLiveVideoText}>
-                Live Video
-                </div>
-            </div>
-            <div className={styles.newPostPhotoVideo}>
-              <div className={styles.newPostPhotoVideoIcon}>
-                <FilterIcon className={styles.newPostPhotoVideoIcon}/>
-                </div>
-              <div className={styles.newPostPhotoVideoText}>
-                Photo/Video
-                </div>
-            </div>
-            <div className={styles.newPostFeelingActivity}>
-              <div className={styles.newPostFeelingActivityIcon}>
-                <SentimentVerySatisfiedIcon className={styles.newPostFeelingActivityIcon}/>
-                </div>
-              <div className={styles.newPostFeelingActivityText}>
-                Feeling/Activity
-                </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  );
-}
 
 function Feed() {
   const [reactTutorialArticles, setReactTutorialArticles] = useState(initialReactTutorialArticles);
@@ -100,14 +37,9 @@ function Feed() {
     />
   ));
 
-  const handleAddPost = (newPost) => {
-    // Add the new post to the beginning of the array
-    setReactTutorialArticles([newPost, ...reactTutorialArticles]);
-  };
-
   return (
     <div className={styles.feed}>
-      <NewPostForm onAddPost={handleAddPost} />
+      <NewPostForm />
       {articlesArray}
       hello
     </div>
