@@ -1,0 +1,320 @@
+/* main container for the sidebar */
+.sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 300px;
+  background-color: #ffffff;
+  overflow: hidden;
+  overflow-y: scroll;
+  margin: 0;
+  border: 2px solid #f0f2f5;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  padding-left: 10px;
+}
+
+/* main container for the main content */
+.main {
+  position: absolute;
+  top: 0px;
+  left: 310px;
+  width: calc(100vw - 300px);
+  height: 100%;
+  background-color: #f0f2f5;
+  overflow: hidden;
+  overflow-y: scroll;
+  padding: 2.5%;
+  margin-left: 0;
+}
+
+.gameRow {
+  width: calc(95vw - 300px);
+  }
+
+/* Row title text */
+.gametitle {
+  text-align: left;
+  font-size: 22px;
+  font-weight: 700;
+  width: 100%;
+}
+  
+/* Grid of game cards.  Parent element to all cards */
+.gameGrid {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  margin: 0;
+  padding: 0;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 0 10px;
+}
+
+/* Parent container for all individual card elements */
+.gameCard {
+  position: relative;
+  height: 100%;
+  max-width:210px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 10px;
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  transition: filter 0.2s ease;
+  aspect-ratio: 1 / 1;
+  margin-right: 5px;
+}
+
+/* Slightly darkens card on mouse-over */
+.gameCard:hover {
+  filter: brightness(95%);
+}
+  
+/* Adjusts card width based on screen width during resizing of view window */
+  @media (max-width: 1500px) {
+    .gameCard {
+      flex-basis: calc(20% - 7px);
+    }
+  }
+  
+  @media (max-width: 1200px) {
+    .gameCard {
+      flex-basis: calc(25% - 7px);
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .gameCard {
+      flex-basis: calc(33.33% - 7px);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .gameCard {
+      flex-basis: calc(50% - 7px);
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .gameCard {
+      flex-basis: calc(100% - 7px);
+    }
+  }
+  
+/* Background image that's blured (appears below game image) */
+  .gameCardBackground {
+    width: 100%;
+    height: 170px;
+    background-size: cover;
+    filter: blur(25px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: filter 0.2s ease;
+  }
+  
+  /* Game title image */
+  .gameImage {
+    height: 55%;
+    width: auto;
+    object-fit: cover;
+    z-index: 1;
+  }
+  
+  /* Bottom region of game card.  Contains name and player count */
+  .gameCardBottom {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    z-index: 1;
+  }
+  
+  /* Game name text */
+  .gameCardBottom h2 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  /* Player count text */
+  .playerCount {
+    background-color: rgb(54, 53, 53);
+    font-size: small;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    width: fit-content;
+    border-radius: 25px;
+    margin: 5px;
+    margin-left: 0;
+  }
+
+
+  
+  
+  .sidebar_header_region {
+    position: fixed;
+    width: 300px;
+    background: white;
+  }
+  
+  .sidebar_search_region {
+    padding-top: 40px;
+  }
+  
+  .sidebar_header {
+      display: flex;
+      width: calc(100% - 7px);
+      height: 30px;
+      padding-top: 5px;
+  }
+  
+  .settings_icon {
+    background-color: #e4e6eb;
+    width: 20px;
+    height: 20px;
+    padding: 8px;
+    border-radius: 50%;
+  }
+  
+  .rightIcon {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-end;
+    font-size: 14px;  
+  }
+  
+  .title{
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 20px;
+  }
+  
+  .search_input{
+      display: flex;
+      align-items: center;
+      background-color: #f0f2f5;
+      padding-top: 0px;
+      border-radius: 999px;
+      border: 1px;
+      height: 32px;
+      margin-top: 8px;
+      margin-bottom: 10px;
+  }
+  .search_input > input{
+      border: none;
+      background-color: transparent;
+      outline-width: 0;
+      padding: 0;
+  }
+  
+  .search_icon {
+    width: 19px;
+    color: #65676B;
+    height: auto;
+    padding: 8px;
+  }
+  .settings_icon{
+      align-self: right;
+      margin-left: 10px;
+      cursor: pointer;
+  }
+  
+  /* width */
+  .sidebar::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  /* Track */
+  .sidebar::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 0;
+    border-radius: 10px;
+  }
+  
+  /* Handle */
+  .sidebar::-webkit-scrollbar-thumb {
+    background: #ffffff; /* Set the default color to white */
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  .sidebar:hover::-webkit-scrollbar-thumb {
+    background: #b1b1b1; /* Change the color to #b1b1b1 when hovering */
+  }
+  
+  /* Handle on hover and when scrolling */
+  .sidebar:hover::-webkit-scrollbar-thumb:active {
+    background: #b1b1b1; /* Adjust color as needed */
+  }
+  
+  /* Handle when not hovering */
+  .sidebar:not(:hover)::-webkit-scrollbar-thumb {
+    background: #ffffff; /* Change the color to white when not hovering */
+  }
+  
+  /* Handle when not hovering and scrolling */
+  .sidebar:not(:hover)::-webkit-scrollbar-thumb:active {
+    background: #ffffff; /* Adjust color as needed */
+  }
+  
+  
+  .sidebarLink {
+  display: flex;
+  height: 52px;
+  padding-right: 8px;
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+    align-items: center;
+    border-radius: 10px;
+    }
+  .sidebarLink:hover {
+    background-color: #f0f2f5;
+  }
+  .sidebarLink:hover > .link_icon {
+  }
+  .link_icon {
+    background-color: #e4e6eb;
+    color: #050505;
+    width: 20px;
+    height: auto;
+    padding: 7px;
+    margin-right: 10px;
+    border-radius: 50%;
+  }
+  
+  .divider {
+    background-color: #ced0d4;
+    background: #dadde1;
+    height: 1px;
+    margin-bottom: 12px;
+    margin-top: 12px;
+    border-style: none;
+  }
+  
+  .sidebar_subtitle {
+    width: 50%;
+    font-weight: 600;
+    line-height: 1.1765;
+    color: #050505;
+  }
+  
+  .link {
+    text-decoration: none;
+    color: #2e81f4;
+    font.size: .9375rem;
+  }
+  
+  .text_block {
+    font-size: 12px;
+    margin: 0;
+  }

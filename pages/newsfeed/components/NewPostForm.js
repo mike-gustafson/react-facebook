@@ -29,7 +29,18 @@ export default function NewPostForm() {
       <hr className={styles.divider} />
       <div className={styles.newPostBottom}>
         <div className={styles.newPostAddOns}>
-          {/* ... (Your existing icons and functionalities) */}
+          <div className={styles.newPostLiveVideo}>
+            <VideoCameraFrontIcon className={styles.newPostLiveVideoIcon} />
+            <div className={styles.newPostLiveVideoText}>Live Video</div>
+          </div>
+          <div className={styles.newPostPhotoVideo}>
+            <FilterIcon className={styles.newPostPhotoVideoIcon} />
+            <div className={styles.newPostPhotoVideoText}>Photo/Video</div>
+          </div>
+          <div className={styles.newPostFeelingActivity}>
+            <SentimentVerySatisfiedIcon className={styles.newPostFeelingActivityIcon} />
+            <div className={styles.newPostFeelingActivityText}>Feeling/Activity</div>
+          </div>
         </div>
       </div>
 

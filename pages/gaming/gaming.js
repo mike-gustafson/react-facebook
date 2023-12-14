@@ -1,11 +1,12 @@
-import GamesWeLove from "./main/01-games-we-love";
-import TopPicksForYou from "./main/02-top-picks-for-you";
-import HappeningNow from "./main/03-happening-now";
-import MostPlayedGames from "./main/04-most-played-games";
-import FeaturedGames from "./main/05-featured-games";
-import AllGames from "./main/06-all-games";
+import GamesWeLove from "./main/GamesWeLove";
+import TopPicksForYou from "./main/TopPicksForYou";
+import HappeningNow from "./main/HappeningNow";
+import MostPlayedGames from "./main/MostPlayedGames";
+import FeaturedGames from "./main/FeaturedGames";
+import AllGames from "./main/AllGames";
 import styles from '../../styles/Gaming.module.css';
-import Sidebar from "./sidebar";
+import Sidebar from "../gaming/sidebar/Sidebar";
+
 export default function Gaming() {
     return (
         <div className={styles.container}>

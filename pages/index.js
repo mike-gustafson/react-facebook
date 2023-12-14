@@ -3,6 +3,7 @@ import { useState } from 'react';
 
 // components
 import NavBar from './NavBar';
+import Videos from './video/Video';
 import Tweets from './tweets/Tweets';
 import Gaming from './gaming/gaming';
 import Newsfeed from './newsfeed/Newsfeed';
@@ -37,6 +38,9 @@ export default function Home() {
       <div className={style.contentContainer}>           {/* container for the main content of the app */}
         {activeMenuItem === 'Newsfeed' && (
           <Newsfeed />                                   // newsfeed component             
+        )}
+        {activeMenuItem === 'Video' && (
+          <Videos />
         )}
         {activeMenuItem === 'Tweets' && (               
           <Tweets />                                     // tweets component
