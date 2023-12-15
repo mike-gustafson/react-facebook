@@ -1,0 +1,309 @@
+/* main container for the main content */
+.Main {
+  position: absolute;
+  top: 0px;
+  left: 330px;
+  width: calc(100vw - 334px);
+  height: 100%;
+  background-color: #e4e6eb;
+  overflow: hidden;
+  overflow-y: scroll;
+  padding: 0 0 0 2px;
+  margin: 0;
+}
+  .FeedContainer {
+    margin: 10px auto;
+  }
+    .Post {
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 10px 0;
+      margin: 10px auto;
+      max-width: 673px;
+      min-width: 300px;
+      width: 90%;
+    }
+      .Post > .Header {
+        display: flex;
+        align-items: center;
+        padding: 0 0 0 10px;
+      }
+        .Avatar {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          margin-right: 10px;
+        }
+        .Name {
+          font-size: 14px;
+          font-weight: 600;
+          margin: 0;
+        }
+        .Name > .Follow {
+          color: blue;
+        }
+
+        .Timestamp {
+          font-size: 12px;
+          margin: 0;
+          color: #65676B;
+        }
+      .Post > .Body {
+        padding: 10px;
+      }
+        .Body > .Text {
+          font-size: 14px;
+          margin: 0;
+        }
+        .Body > .Image {
+          width: 100%;
+          height: auto;
+          margin: 10px 0;
+        }
+      .Post > .Footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 10px;
+      }
+        .Actions {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0 10px;
+        }
+        .Actions > .Action {
+          display: flex;
+          align-items: center;
+          height: 100%;
+          color: #65676B;
+          font-size: 12px;
+          cursor: pointer;
+          border-radius: 2px;
+          padding: 7px;
+        }
+          .Action > .Icon {
+            width: 20px;
+            height: auto;
+            margin-right: 7px;
+          }
+          .Action:hover {
+            background-color: #f0f2f5;
+          }
+        .ActionCounts {
+          display: flex;
+          align-items: center;
+          height: 100%;
+          color: #65676B;
+          font-size: 12px;
+          cursor: pointer;
+          margin: 0 0 0 18px;
+        }
+          .Likes {
+            display: flex;
+            align-items: center;
+          }
+            .LikesIcon {
+              width: 10px;
+              height: auto;
+              margin-right: 7px;
+              background-color: #216FDB;
+              color: white;
+              padding: 4px;
+              border-radius: 25px;
+            }
+            .HeartsIcon {
+              width: 10px;
+              height: auto;
+              margin: 0 7px 0 -10px;
+              background-color: #e41e3f;
+              color: white;
+              padding: 4px;
+              border-radius: 25px;
+            }
+          .ActionCounts > *:hover {
+            text-decoration: underline;
+            cursor: pointer;
+          }
+          .ActionCounts > .Shares, .ActionCounts > .Space {
+            text-decoration: none;
+            cursor: default;
+          }
+      .Body > .Comments {
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+      }
+        .Comments > .Comment {
+          display: flex;
+          align-items: center;
+          margin: 5px 0;
+        }
+          .Comment > .Avatar {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 10px;
+          }
+          .Comment > .Name {
+            font-size: 12px;
+            font-weight: 600;
+            margin: 0;
+          }
+          .Comment > .Text {
+            font-size: 12px;
+            margin: 0;
+          }
+          .Comment > .Timestamp {
+            font-size: 10px;
+            margin: 0;
+            color: #65676B;
+          }
+        .Comments > .Comment > .Reply {
+          color: blue;
+          font-size: 12px;
+          margin-left: 40px;
+          cursor: pointer;
+        }
+        .Comments > .Comment > .Reply:hover {
+          text-decoration: underline;
+        }
+      .Body > .AddComment {
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+      }
+        .AddComment > .Avatar {
+          width:
+    }
+
+/* main container for the sidebar */
+.Sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 304px;
+  background-color: #ffffff;
+  overflow: hidden;
+  margin: 0;
+  padding:0 14px 0 8px;
+  border-right: 2px solid #f0f2f5;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+          color: #050505;
+
+}
+  /* Header element in Sidebar */
+  .HeaderContainer {
+    width: stretch;
+  }
+    /* Container for Header Items */
+    .Header {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      padding: 5px 0 5px 8px;
+    }
+      /* Title of page */
+      .Title {
+        font-size: 20px;
+        font-weight: 600;
+      }
+      /* Container for right aligned Icon */
+      .IconContainer {
+        display: flex;
+        width: stretch;
+        height: 100%;
+        align-items: center;
+        justify-content: flex-end;
+      }
+        /* Settings icon */
+        .IconContainer > .Icon {
+          height: 22px;
+          width: auto;
+          cursor: pointer;
+          background-color: #e4e6eb;
+          padding: 6px;
+          border-radius: 50%;
+        }
+  /* Search element in Sidebar */
+  .SearchContainer {
+    width: stretch;
+  }
+    .Search {
+      height: 100%;
+      margin: 0 0 12px 8px;
+    }
+      .SearchBar {
+        display: flex;
+        align-items: center;
+        background-color: #f0f2f5;
+        border-radius: 25px;
+        width: stretch;
+        height: 34px;
+      }
+        .SearchBar > .Icon {
+          width: 19px;
+          color: #65676B;
+          height: auto;
+          padding: 8px;
+        }
+        .SearchBar > .Input {
+          border: none;
+          width: stretch;
+          background-color: transparent;
+          outline-width: 0;
+          padding: 0;
+        }
+
+  .LinkContainer {
+    width: stretch;
+  }    
+    .Link {
+      display: flex;
+      align-items: center;
+      height: 48px;
+      margin: 0 10px 0 4px;
+      cursor: pointer;  
+      color: #050505;
+      font-size: 12px;
+      font-weight: 600;
+      border-radius: 10px;
+    }
+      .Link > .Icon {
+        background-color: #e4e6eb;
+        color: #050505;
+        width: 20px;
+        height: auto;
+        padding: 7px;
+        margin: 0 10px 0 4px;
+        border-radius: 50%;
+      }
+    .Link:hover {
+      background-color: #f0f2f5;
+    }
+  .Divider {
+    background-color: #ced0d4;
+    background: #dadde1;
+    height: 1px;
+    margin: 0;
+    width: stretch;
+    border-style: none;
+  }
+
+
+  @media (max-width: 800px) {
+    .Post {
+      min-width: 95%;
+    }
+    .Sidebar {
+      display: none;
+    }
+    .Main {
+      width: 100%;
+      left: 0;
+    }
+    .FeedContainer {
+      max-width: 90%;
+    }
+  }

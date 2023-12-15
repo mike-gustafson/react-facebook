@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 // components
 import NavBar from './NavBar';
-import Videos from './video/Video';
+import Video from './video/Video';
 import Tweets from './tweets/Tweets';
 import Gaming from './gaming/gaming';
 import Newsfeed from './newsfeed/Newsfeed';
@@ -40,7 +40,7 @@ export default function Home() {
           <Newsfeed />                                   // newsfeed component             
         )}
         {activeMenuItem === 'Video' && (
-          <Videos />
+          <Video />
         )}
         {activeMenuItem === 'Tweets' && (               
           <Tweets />                                     // tweets component
