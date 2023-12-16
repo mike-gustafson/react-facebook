@@ -1,5 +1,4 @@
-// VideoPost.js
-import React from 'react';
+import React, { useState } from 'react';
 import YouTube from 'react-youtube';
 import PropTypes from 'prop-types';
 import style from '../../../../styles/Video.module.css';
@@ -20,6 +19,7 @@ const VideoPost = ({ title, description, timestamp, author, likes, comments, sha
         },
     };
 
+
     return (
         <div className={style.Post}>
             <div className={style.Header}>
@@ -33,9 +33,11 @@ const VideoPost = ({ title, description, timestamp, author, likes, comments, sha
                     <p className={style.Timestamp}>{new Date().toLocaleDateString()}</p>
                 </div>
             </div>
-            <div className={style.Content}>
-                <h3>{title}</h3>
-                <p>{description}</p>
+            <div className={style.Body}>
+            <h3>{title}</h3>
+                <p>
+                    {description}
+                </p>
             </div>
             <div className={style.VideoContainer}>
                 <YouTube videoId={videoId} opts={opts} />

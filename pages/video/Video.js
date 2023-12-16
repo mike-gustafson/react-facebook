@@ -1,16 +1,24 @@
+import React, { useState } from 'react';
 import Main from './main/Main';
 import Sidebar from './sidebar/Sidebar';
-import styles from '../../styles/Video.module.css';
+import style from '../../styles/Video.module.css';
+import styleSidebar from '../../styles/Sidebar.module.css';
 
-export default function Videos() {
+export default function Video() {
+    const [selectedLink, setSelectedLink] = useState('Home');
+
+    const handleLinkClick = (link) => {
+        setSelectedLink(link);
+    };
+
     return (
-        <div className={styles.Container}>
-            <div className={styles.Sidebar}>
-            <Sidebar />
+        <div className={style.Container}>
+            <div className={style.Sidebar}>
+                <Sidebar onLinkClick={handleLinkClick} />
             </div>
-            <div className={styles.Main}>
-            <Main />
+            <div className={style.Main}>
+                <Main selectedLink={selectedLink} />
             </div>
         </div>
-    )
+    );
 }

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import styles from '../../../styles/Gaming.module.css';
+import style from '../../../styles/Sidebar.module.css';
 import SportsSoccerIcon from '@mui/icons-material/SportsSoccer';
 import VideogameAssetIcon from '@mui/icons-material/VideogameAsset';
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
@@ -51,15 +51,15 @@ export default function Categories() {
   const CategoriesArray = array.map((s, idx) => {
     const IconComponent = iconMap[s];
     return (
-      <div key={idx} className={styles.sidebarLink}>
-        {IconComponent && <IconComponent className={styles.link_icon} />}{s}
+      <div key={idx} className={style.Link}>
+        {IconComponent && <IconComponent className={style.Icon} />}{s}
       </div>
     );
   });
 
   return (
-    <div className={styles.sidebar_categories_region}>
-        <h3 className={styles.sidebar_subtitle}>Categories</h3>
+    <div className={style.Container}>
+        <h3 className={style.Title}>Categories</h3>
         {CategoriesArray}
         <br/>
       </div>

@@ -1,17 +1,17 @@
-import SidebarHeader from './sidebar-header';
-import SidebarSearch from './sidebar-search';
+import Header from './Header';
+import Search from './Search';
 import Yourgames from './your-games';
-import Categories from './categories';
-import styles from '../../../styles/Gaming.module.css';
+import Categories from './Categories';
+import style from '../../../styles/Sidebar.module.css';
 
 export default function Sidebar() {
     return (
-        <div className={styles.sidebar}>
-            <SidebarHeader/>
-            <SidebarSearch/>
-            <hr className={styles.divider}/>
+        <div className={style.Sidebar}>
+            <Header/>
+            <Search />
+            <hr className={style.Divider}/>
             <Yourgames/>
-            <hr className={styles.divider}/>
+            <hr className={style.Divider}/>
             <Categories/>
         </div>
     )

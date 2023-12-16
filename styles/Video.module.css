@@ -1,4 +1,15 @@
-/* main container for the main content */
+.Sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 304px;
+  margin: 0;
+  padding:0 14px 0 8px;
+  border-right: 2px solid #f0f2f5;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+          color: #050505;
+}
 .Main {
   position: absolute;
   top: 0px;
@@ -42,23 +53,33 @@
         .Name > .Follow {
           color: blue;
         }
-
         .Timestamp {
           font-size: 12px;
           margin: 0;
           color: #65676B;
         }
       .Post > .Body {
-        padding: 10px;
+        padding: 0 10px;
       }
-        .Body > .Text {
-          font-size: 14px;
+        .Body > h3 {
+          font-size: 16px;
           margin: 0;
         }
-        .Body > .Image {
-          width: 100%;
-          height: auto;
-          margin: 10px 0;
+        .Body > p {
+          font-size: 16px;
+          margin: 8px 0;
+        }
+        .Collapsed {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        .Expanded {
+          white-space: normal;
+        }
+        .SeeMore {
+          color: blue;
+          cursor: pointer;
         }
       .Post > .Footer {
         display: flex;
@@ -174,123 +195,8 @@
         padding: 0 10px;
       }
         .AddComment > .Avatar {
-          width:
-    }
-
-/* main container for the sidebar */
-.Sidebar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 304px;
-  background-color: #ffffff;
-  overflow: hidden;
-  margin: 0;
-  padding:0 14px 0 8px;
-  border-right: 2px solid #f0f2f5;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
-          color: #050505;
-
-}
-  /* Header element in Sidebar */
-  .HeaderContainer {
-    width: stretch;
-  }
-    /* Container for Header Items */
-    .Header {
-      display: flex;
-      align-items: center;
-      height: 100%;
-      padding: 5px 0 5px 8px;
-    }
-      /* Title of page */
-      .Title {
-        font-size: 20px;
-        font-weight: 600;
+          width: 30px;
       }
-      /* Container for right aligned Icon */
-      .IconContainer {
-        display: flex;
-        width: stretch;
-        height: 100%;
-        align-items: center;
-        justify-content: flex-end;
-      }
-        /* Settings icon */
-        .IconContainer > .Icon {
-          height: 22px;
-          width: auto;
-          cursor: pointer;
-          background-color: #e4e6eb;
-          padding: 6px;
-          border-radius: 50%;
-        }
-  /* Search element in Sidebar */
-  .SearchContainer {
-    width: stretch;
-  }
-    .Search {
-      height: 100%;
-      margin: 0 0 12px 8px;
-    }
-      .SearchBar {
-        display: flex;
-        align-items: center;
-        background-color: #f0f2f5;
-        border-radius: 25px;
-        width: stretch;
-        height: 34px;
-      }
-        .SearchBar > .Icon {
-          width: 19px;
-          color: #65676B;
-          height: auto;
-          padding: 8px;
-        }
-        .SearchBar > .Input {
-          border: none;
-          width: stretch;
-          background-color: transparent;
-          outline-width: 0;
-          padding: 0;
-        }
-
-  .LinkContainer {
-    width: stretch;
-  }    
-    .Link {
-      display: flex;
-      align-items: center;
-      height: 48px;
-      margin: 0 10px 0 4px;
-      cursor: pointer;  
-      color: #050505;
-      font-size: 12px;
-      font-weight: 600;
-      border-radius: 10px;
-    }
-      .Link > .Icon {
-        background-color: #e4e6eb;
-        color: #050505;
-        width: 20px;
-        height: auto;
-        padding: 7px;
-        margin: 0 10px 0 4px;
-        border-radius: 50%;
-      }
-    .Link:hover {
-      background-color: #f0f2f5;
-    }
-  .Divider {
-    background-color: #ced0d4;
-    background: #dadde1;
-    height: 1px;
-    margin: 0;
-    width: stretch;
-    border-style: none;
-  }
-
 
   @media (max-width: 800px) {
     .Post {

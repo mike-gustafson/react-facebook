@@ -1,10 +1,10 @@
-import styles from '../../../../styles/Video.module.css';
+import style from '../../../../styles/Sidebar.module.css';
 
 export default function Explore (){
     return (
     <div>
-      <p className={styles.text_block}>Explore</p>
-      <div className={styles.sidebarLink}>"bunch of hashtags"
+      <p className={style.Title}>Explore</p>
+      <div className={style.SidebarLink}>"bunch of hashtags"
       </div>        
     </div>
   )

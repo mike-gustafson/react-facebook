@@ -10,7 +10,7 @@ import Sidebar from "../gaming/sidebar/Sidebar";
 export default function Gaming() {
     return (
         <div className={styles.container}>
-            <div className={styles.sidebar}>
+            <div className={styles.Sidebar}>
             <Sidebar />
             </div>
             <div className={styles.main}>
